@@ -2,7 +2,7 @@ class hadoop {
   $hadoop_home = "/opt/hadoop"
 
     exec { "download_hadoop":
-      command => "wget -O /tmp/hadoop.tar.gz http://192.168.101.4:8000/hadoop-2.2.0.tar.gz",
+      command => "wget -O /tmp/hadoop.tar.gz http://archive.apache.org/dist/hadoop/core/hadoop-2.2.0/hadoop-2.2.0.tar.gz",
       path => $path,
       unless => "ls /opt | grep hadoop-2.2.0",
       timeout => 20000,
